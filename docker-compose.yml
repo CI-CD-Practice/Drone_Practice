@@ -10,15 +10,15 @@ services:
       - ./:/data
     restart: always
     environment:
-      - DRONE_SERVER_HOST=your-server-ip
+      - DRONE_SERVER_HOST=localhost
       - DRONE_SERVER_PROTO=https
       - DRONE_TLS_AUTOCERT=false
       - DRONE_RPC_SECRET=drone-secret
       - DRONE_AGENTS_ENABLED=true
       # GitHub Config
       - DRONE_GITHUB_SERVER=https://github.com
-      - DRONE_GITHUB_CLIENT_ID=your-github-client-id
-      - DRONE_GITHUB_CLIENT_SECRET=your-github-secret
+      - DRONE_GITHUB_CLIENT_ID=${DRONE_GITHUB_CLIENT_ID}
+      - DRONE_GITHUB_CLIENT_SECRET=${DRONE_GITHUB_CLIENT_SECRET}
       - DRONE_LOGS_PRETTY=true
       - DRONE_LOGS_COLOR=true
 

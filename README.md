@@ -2,7 +2,7 @@
 
 ## Setup
 
-copy `.env` and input your credentials
+- copy `.env` and input your credentials
 
 ```
 cp .env.example .env
@@ -18,17 +18,27 @@ ngrok http 8081
 
 replace `DRONE_SERVER_HOST=8e76ad03.ngrok.io` without `https://`
 
-- generate secret
+- Generate RPC Secret
 
 ```
  openssl rand -hex 16
 ```
+
+replace `DRONE_RPC_SECRET=`
 
 - generate github credential
 
 ![](readme-imgs/2020-03-20-19-40-18.png)
 ![](readme-imgs/2020-03-20-19-40-59.png)
 ![](readme-imgs/2020-03-20-19-41-17.png)
+
+## Start the App
+
+```
+docker-compose up -d
+```
+
+And navigate to `localhost:8081`
 
 ## Drone Note
 

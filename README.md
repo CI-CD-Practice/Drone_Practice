@@ -8,9 +8,27 @@ copy `.env` and input your credentials
 cp .env.example .env
 ```
 
+- ngrok generate https for testing
+
 ```
 ngrok http 8081
 ```
+
+![](readme-imgs/2020-03-20-19-35-11.png)
+
+replace `DRONE_SERVER_HOST=8e76ad03.ngrok.io` without `https://`
+
+- generate secret
+
+```
+ openssl rand -hex 16
+```
+
+- generate github credential
+
+![](readme-imgs/2020-03-20-19-40-18.png)
+![](readme-imgs/2020-03-20-19-40-59.png)
+![](readme-imgs/2020-03-20-19-41-17.png)
 
 ## Drone Note
 
